@@ -5,7 +5,7 @@
 import {getAuth,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,sendPasswordResetEmail,signOut} from 'https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js';
 import {getFirestore,doc,collection,onSnapshot,addDoc,deleteDoc,setDoc,updateDoc,serverTimestamp,query,orderBy} from 'https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js';
 import {getFunctions,httpsCallable} from 'https://www.gstatic.com/firebasejs/12.3.0/firebase-functions.js';
-const firebaseConfig = {apiKey:"AIzaSyBlg0QZNcyUwhgkdeR--q2VJsyXAkVG7JY",authDomain:"futari-kakeibo-ec626.firebaseapp.com",projectId:"futari-kakeibo-ec626",storageBucket:"futari-kakeibo-ec626.firebasestorage.app",messagingSenderId:"98000463837",appId:"1:98000463837:web:da63b18ae281e261737834"};
+const firebaseConfig = {apiKey:"AIzaSyBlgOQZNcyUwhgkdeR--q2VJsyXAkVG7JY",authDomain:"futari-kakeibo-ec626.firebaseapp.com",projectId:"futari-kakeibo-ec626",storageBucket:"futari-kakeibo-ec626.firebasestorage.app",messagingSenderId:"98000463837",appId:"1:98000463837:web:da63b18ae281e261737834"};
 const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app),functions=getFunctions(app,'asia-northeast1');
 const $=id=>document.getElementById(id),money=n=>Math.round(Number(n)||0).toLocaleString('ja-JP')+'円';
 const monthNow=()=>new Date().toLocaleDateString('sv-SE').slice(0,7),dateNow=()=>new Date().toLocaleDateString('sv-SE');
